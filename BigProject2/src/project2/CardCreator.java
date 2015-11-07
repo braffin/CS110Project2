@@ -7,17 +7,18 @@ import javax.swing.JOptionPane;
 public class CardCreator {
 		
 
-		public int CardValue(int playerhandvalue) {
+		public int CardValue() {
 		int cardvalue=0;
 		SecureRandom cardpicker = new SecureRandom();
 		
 		
 		String [] facevalue = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
+		String [] suit = {"Hearts","Clubs","Spades","Diamonds"};
 		
-		
+		int drawsuit = cardpicker.nextInt(3);
 		int drawface = cardpicker.nextInt(12);
 		
-		System.out.println("Player is dealed the " + facevalue[drawface]);
+		System.out.println("The " + facevalue[drawface] + " of " + suit[drawsuit] + " is dealt");
 		
 		switch (facevalue[drawface]){
 		case "Ace": {cardvalue=1; break;}//case end
@@ -31,20 +32,6 @@ public class CardCreator {
 		
 		
 		
-		
-		public String CardFace() {
-		String cardface;
-		SecureRandom cardpicker = new SecureRandom();
-		
-		
-		String [] suit = {"Hearts","Clubs","Spades","Diamonds"};
-		
-		int drawsuit = cardpicker.nextInt(3);
-		
-		
-		
-		
-		return (cardface);}//end CardFace
 		
 		//Hit or Stay Buttons JOPtionPanes
 		public int HitStay(){
